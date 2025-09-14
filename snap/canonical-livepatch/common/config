@@ -1,0 +1,3 @@
+remote-server: https://livepatch.canonical.com
+check-interval: 60
+log-level: WARNING

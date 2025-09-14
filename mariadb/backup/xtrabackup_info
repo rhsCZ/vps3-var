@@ -1,0 +1,17 @@
+uuid = 750a8d86-f6a0-11ee-947d-02001702ca1c
+name = 
+tool_name = mariabackup
+tool_command = --backup --target-dir=/var/mariadb/backup/ --user=root
+tool_version = 10.6.16-MariaDB
+ibbackup_version = 10.6.16-MariaDB
+server_version = 10.6.16-MariaDB-0ubuntu0.22.04.1-log
+start_time = 2024-04-09 20:39:09
+end_time = 2024-04-09 20:39:11
+lock_time = 0
+binlog_pos = filename 'master1-bin.000001', position '330', GTID of the last change ''
+innodb_from_lsn = 0
+innodb_to_lsn = 1124626
+partial = N
+incremental = N
+format = file
+compressed = N

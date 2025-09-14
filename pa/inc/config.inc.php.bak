@@ -1,0 +1,23 @@
+<?php
+$db_host = 'localhost';
+$db_name = 'powerdns';
+$db_user = 'powerdns';
+$db_pass = 'zY2D2d43d8pf3R';
+$db_type = 'mysql';
+$dns_top_level_tld_check = true;
+$dns_third_level_check = true;
+$pdnssec_use = true;
+$dns_ttl = 300;
+$session_key = '^fMfF*#yZ8PReDD4ZlRqVvHzJc8EXC5jy@VB(U1r#@zP@O';
+
+$iface_lang = 'cs_CZ';
+$iface_style = 'spark';
+$iface_zonelist_serial = true;
+$iface_add_reverse_record = false;
+$dns_hostmaster = 'hostmaster.rhscz.eu';
+$dns_ns1 = 'ns1.rhscz.eu';
+$dns_ns2 = 'ns2.rhscz.eu';
+$pdns_api_url = 'http://127.0.0.1:8081/';
+$pdns_api_key = 'ccdc175b-8c8c-4cd9-b2bc-efcb99e92f15';
+$ignore_install_dir = true;
+$dns_txt_auto_quote = true;

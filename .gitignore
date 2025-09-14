@@ -1,0 +1,12 @@
+lib/
+local/
+lock/
+tmp/
+mail/
+metrics/
+log/
+run/
+game/
+opt/
+cache/
+pihole-bak/

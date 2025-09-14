@@ -1,0 +1,96 @@
+# Poweradmin URL Rewriting Rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Ensure HTTP Authorization header is forwarded
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Disable rewriting for existing files and directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # API Documentation specific rewrite rules
+    RewriteRule ^api/docs/json$ index.php?page=api/docs/json [QSA,L]
+    RewriteRule ^api/docs$ index.php?page=api/docs [QSA,L]
+
+    # RESTful API routes
+    # User verification endpoint
+    RewriteRule ^api/v1/user/verify$ index.php?page=api/v1/user_verify [QSA,L]
+
+    # Users individual user routes (must come before collection route)
+    RewriteRule ^api/v1/users/([0-9]+)/?$ index.php?page=api/v1/users/$1 [QSA,L]
+    
+    # Users collection route
+    RewriteRule ^api/v1/users/?$ index.php?page=api/v1/users [QSA,L]
+
+    # Zones individual zone routes (must come before collection route)
+    RewriteRule ^api/v1/zones/([0-9]+)/?$ index.php?page=api/v1/zones/$1 [QSA,L]
+    
+    # Zones collection route
+    RewriteRule ^api/v1/zones/?$ index.php?page=api/v1/zones [QSA,L]
+
+    # Zone records individual record routes
+    RewriteRule ^api/v1/zones/([0-9]+)/records/([0-9]+)/?$ index.php?page=api/v1/zones_records/$1/$2 [QSA,L]
+    
+    # Zone records collection routes
+    RewriteRule ^api/v1/zones/([0-9]+)/records/?$ index.php?page=api/v1/zones_records/$1 [QSA,L]
+
+    # Rewrite API base paths (fallback)
+    RewriteRule ^api(/(.*))?$ index.php?page=api/$2 [QSA,L]
+
+    # Handle general page routing if not caught by API rules
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
+</IfModule>
+
+# Protect the .htaccess file
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Security: Allow access to Bootstrap CSS/JS and Bootstrap Icons
+<Files ~ "^vendor/twbs/(bootstrap|bootstrap-icons)/.*\.(css|js|woff|woff2|ttf|eot|svg)$">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Security: Deny access to sensitive directories
+<IfModule mod_rewrite.c>
+    # Allow Bootstrap files before general vendor blocking
+    RewriteCond %{REQUEST_URI} !^/vendor/twbs/(bootstrap|bootstrap-icons)/
+    # Block access to sensitive directories
+    RewriteRule ^(config|lib|tests|tools|vendor)/ - [F,L]
+</IfModule>
+
+# Security: Deny access to hidden files and directories
+<Files ~ "^\..*">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Security: Deny access to sensitive file types
+<Files ~ "\.(sql|md|log)$">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Enable CORS for API endpoints
+<IfModule mod_headers.c>
+    <FilesMatch "^index\.php$">
+        SetEnvIf Request_URI "/api/" CORS=true
+        Header set Access-Control-Allow-Origin "*" env=CORS
+        Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" env=CORS
+        Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-API-Key" env=CORS
+        Header set Access-Control-Max-Age "3600" env=CORS
+    </FilesMatch>
+</IfModule>

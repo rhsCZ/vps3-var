@@ -1,0 +1,54 @@
+# Poweradmin related files
+install/
+
+# Version Control
+.gitignore
+.git
+.github
+
+# IDE
+nbproject
+.idea
+.settings
+.buildpath
+.project
+.vscode
+
+# PHPUnit
+tests
+phpunit.xml.dist
+.phpunit.cache
+.phpunit.result.cache
+
+# Docker
+.dockerignore
+Dockerfile
+
+# phpDocumentor
+docs
+.phive
+tools
+
+# Misc
+**/.DS_Store
+.devcontainer
+phpcs.xml
+phpdoc.dist.xml
+scripts
+transifex.yml
+*.md
+
+# Node.js
+package.json
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Cypress
+cypress/
+cypress.config.js
+cypress/videos
+cypress/screenshots

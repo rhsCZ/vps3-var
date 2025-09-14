@@ -1,0 +1,8 @@
+#php_value display_errors On
+RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_URI} !^http://%{SERVER_NAME}/ip\.php$
+#RewriteCond %{REQUEST_FILENAME} !^http://%{SERVER_NAME}/ip\.php$
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^ip\.php$
+RewriteRule (.*) https://%{SERVER_NAME}$1 [L,R]

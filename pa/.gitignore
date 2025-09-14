@@ -1,0 +1,48 @@
+# Poweradmin related
+inc/config.inc.php
+config/app.php
+/scripts
+templates/custom
+
+# OS generated files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+nbproject
+.idea
+.settings
+.buildpath
+.project
+.vscode
+
+# phpDocumentor
+docs
+.phive
+tools
+
+# PHPUnit
+.phpunit.cache
+.phpunit.result.cache
+
+# Devcontainer
+.devcontainer/scripts/pdns
+
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Cypress
+cypress/videos
+cypress/screenshots
+
+# PHP tools
+.php-cs-fixer.cache

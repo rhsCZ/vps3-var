@@ -1,0 +1,95 @@
+</main>
+<footer class="footer py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% if custom_footer %}
+                {% include ('custom/footer.html') %}
+                {% else %}
+                <a href="https://www.poweradmin.org/">a complete(r) <strong>Poweradmin</strong>
+                    {% if version %}
+                    v{{ version }}
+                    {% endif %}
+                </a>
+                {% endif %}
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                {% if show_theme_switcher %}
+                <button class="btn btn-outline-secondary btn-sm" id="theme-switcher">
+                    <i class="bi" id="theme-icon"></i>
+                </button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% if db_queries %}
+<div class="container pt-3 pb-3">
+    <code>
+        {% for query in db_queries %}
+        {{ query }}<br>
+        {% endfor %}
+    </code>
+</div>
+{% endif %}
+{% if display_stats %}
+{{ display_stats | raw }}
+{% endif %}
+<script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+    (function () {
+        'use strict'
+
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+
+    const alertList = document.querySelectorAll('.alert')
+    const alerts = [...alertList].map(element => new bootstrap.Alert(element))
+
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+    const ifaceStyle = '{{ iface_style }}';
+
+    let currentTheme = localStorage.getItem('theme');
+    if (currentTheme !== 'ignite' && currentTheme !== 'spark') {
+        currentTheme = ifaceStyle || 'ignite';
+    }
+
+    function initializeTheme() {
+        document.body.classList.add(currentTheme);
+        themeIcon.classList.add(currentTheme === 'ignite' ? 'bi-moon' : 'bi-sun');
+        themeStylesheet.href = `style/${currentTheme}.css?time={{ file_version }}`;
+    }
+
+    themeSwitcher.addEventListener('click', () => {
+        const newTheme = currentTheme === 'ignite' ? 'spark' : 'ignite';
+        document.body.classList.replace(currentTheme, newTheme);
+        themeIcon.classList.replace(currentTheme === 'ignite' ? 'bi-moon' : 'bi-sun', newTheme === 'ignite' ? 'bi-moon' : 'bi-sun');
+        themeStylesheet.href = `style/${newTheme}.css?time={{ file_version }}`;
+        localStorage.setItem('theme', newTheme);
+        currentTheme = newTheme;
+    });
+
+    initializeTheme();
+</script>
+</body>
+</html>
