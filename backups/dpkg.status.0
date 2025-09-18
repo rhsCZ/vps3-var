@@ -15340,7 +15340,7 @@ Original-Maintainer: Debian Krap Maintainers <debian-qt-kde@lists.debian.org>
 
 Package: libsqlite3-0
 Status: install ok installed
-Priority: optional
+Priority: important
 Section: libs
 Installed-Size: 1731
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -16991,7 +16991,7 @@ Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 
 Package: libxml2
 Status: install ok installed
-Priority: optional
+Priority: important
 Section: libs
 Installed-Size: 2079
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -17460,46 +17460,12 @@ Installed-Size: 17
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-meta
-Version: 6.8.0-79.79
-Depends: linux-image-generic (= 6.8.0-79.79), linux-headers-generic (= 6.8.0-79.79)
-Recommends: linux-tools-6.8.0-79-generic, ubuntu-kernel-accessories
+Version: 6.8.0-83.83
+Depends: linux-image-generic (= 6.8.0-83.83), linux-headers-generic (= 6.8.0-83.83)
+Recommends: linux-tools-6.8.0-83-generic, ubuntu-kernel-accessories
 Description: Complete Generic Linux kernel and headers
  This package will always depend on the latest complete generic Linux kernel
  and headers.
-
-Package: linux-headers-6.8.0-78
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 83959
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Multi-Arch: foreign
-Source: linux
-Version: 6.8.0-78.78
-Depends: coreutils
-Description: Header files related to Linux kernel version 6.8.0
- This package provides kernel header files for version 6.8.0, for sites
- that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-6.8.0-78/debian.README.gz for details
-
-Package: linux-headers-6.8.0-78-generic
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 28612
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 6.8.0-78.78
-Provides: linux-headers, linux-headers-3.0
-Depends: linux-headers-6.8.0-78, libc6 (>= 2.38), libelf1t64 (>= 0.144), libgcc-s1 (>= 4.2), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.3.3)
-Description: Linux kernel headers for version 6.8.0 on 64 bit x86 SMP
- This package provides kernel header files for version 6.8.0 on
- 64 bit x86 SMP.
- .
- This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-6.8.0-78/debian.README.gz for details.
 
 Package: linux-headers-6.8.0-79
 Status: install ok installed
@@ -17535,6 +17501,40 @@ Description: Linux kernel headers for version 6.8.0 on 64 bit x86 SMP
  This is for sites that want the latest kernel headers.  Please read
  /usr/share/doc/linux-headers-6.8.0-79/debian.README.gz for details.
 
+Package: linux-headers-6.8.0-83
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 83959
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: linux
+Version: 6.8.0-83.83
+Depends: coreutils
+Description: Header files related to Linux kernel version 6.8.0
+ This package provides kernel header files for version 6.8.0, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-6.8.0-83/debian.README.gz for details
+
+Package: linux-headers-6.8.0-83-generic
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 28612
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux
+Version: 6.8.0-83.83
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-6.8.0-83, libc6 (>= 2.38), libelf1t64 (>= 0.144), libgcc-s1 (>= 4.2), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.3.3)
+Description: Linux kernel headers for version 6.8.0 on 64 bit x86 SMP
+ This package provides kernel header files for version 6.8.0 on
+ 64 bit x86 SMP.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-6.8.0-83/debian.README.gz for details.
+
 Package: linux-headers-generic
 Status: install ok installed
 Priority: optional
@@ -17543,8 +17543,8 @@ Installed-Size: 17
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-meta
-Version: 6.8.0-79.79
-Depends: linux-headers-6.8.0-79-generic
+Version: 6.8.0-83.83
+Depends: linux-headers-6.8.0-83-generic
 Description: Generic Linux kernel headers
  This package will always depend on the latest generic kernel headers
  available.
@@ -18070,7 +18070,7 @@ Description: Signed kernel image generic
 Built-Using: linux (= 6.8.0-71.71)
 
 Package: linux-image-6.8.0-78-generic
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: optional
 Section: kernel
 Installed-Size: 14693
@@ -18078,6 +18078,7 @@ Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-signed
 Version: 6.8.0-78.78
+Config-Version: 6.8.0-78.78
 Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, redhat-cluster-modules, spl-dkms, spl-modules, v4l2loopback-dkms, v4l2loopback-modules, virtualbox-guest-modules, zfs-dkms, zfs-modules
 Depends: kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-6.8.0-78-generic
 Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo, initramfs-tools | linux-initramfs-tool
@@ -18107,6 +18108,25 @@ Description: Signed kernel image generic
  Canonical's signing key.
 Built-Using: linux (= 6.8.0-79.79)
 
+Package: linux-image-6.8.0-83-generic
+Status: install ok installed
+Priority: optional
+Section: kernel
+Installed-Size: 14689
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-signed
+Version: 6.8.0-83.83
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, redhat-cluster-modules, spl-dkms, spl-modules, v4l2loopback-dkms, v4l2loopback-modules, virtualbox-guest-modules, zfs-dkms, zfs-modules
+Depends: kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-6.8.0-83-generic
+Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo, initramfs-tools | linux-initramfs-tool
+Suggests: fdutils, linux-tools, linux-headers-6.8.0-83-generic, linux-modules-extra-6.8.0-83-generic
+Conflicts: linux-image-unsigned-6.8.0-83-generic
+Description: Signed kernel image generic
+ A kernel image for generic.  This version of it is signed with
+ Canonical's signing key.
+Built-Using: linux (= 6.8.0-83.83)
+
 Package: linux-image-generic
 Status: install ok installed
 Priority: optional
@@ -18115,9 +18135,9 @@ Installed-Size: 17
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-meta
-Version: 6.8.0-79.79
-Provides: ivsc-modules (= 0~git202311021215.73a044d9), spl-modules (= 2.2.2-0ubuntu9.3), v4l2loopback-modules (= 0.12.7-2ubuntu5), virtualbox-guest-modules (= 6.8.0-79), wireguard-modules (= 1.0.0), zfs-modules (= 2.2.2-0ubuntu9.3)
-Depends: linux-image-6.8.0-79-generic, linux-modules-extra-6.8.0-79-generic, linux-firmware, intel-microcode, amd64-microcode
+Version: 6.8.0-83.83
+Provides: ivsc-modules (= 0~git202311021215.73a044d9), spl-modules (= 2.2.2-0ubuntu9.3), v4l2loopback-modules (= 0.12.7-2ubuntu5), virtualbox-guest-modules (= 6.8.0-83), wireguard-modules (= 1.0.0), zfs-modules (= 2.2.2-0ubuntu9.3)
+Depends: linux-image-6.8.0-83-generic, linux-modules-extra-6.8.0-83-generic, linux-firmware, intel-microcode, amd64-microcode
 Recommends: thermald
 Description: Generic Linux kernel image
  This package will always depend on the latest generic kernel image
@@ -18132,7 +18152,7 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Multi-Arch: same
 Source: linux
-Version: 6.8.0-79.79
+Version: 6.8.0-83.83
 Replaces: linux-kernel-headers
 Provides: aufs-dev, linux-kernel-headers
 Conflicts: linux-kernel-headers
@@ -18741,7 +18761,7 @@ Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  correctly, and that supporting packages are also installed.
 
 Package: linux-modules-6.8.0-78-generic
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: optional
 Section: kernel
 Installed-Size: 38253
@@ -18749,6 +18769,7 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux
 Version: 6.8.0-78.78
+Config-Version: 6.8.0-78.78
 Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  Contains the corresponding System.map file, the modules built by the
  packager, and scripts that try to ensure that the system is not left in an
@@ -18771,6 +18792,28 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux
 Version: 6.8.0-79.79
+Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
+ Contains the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports Generic processors.
+ .
+ Geared toward desktop and server systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-generic meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+
+Package: linux-modules-6.8.0-83-generic
+Status: install ok installed
+Priority: optional
+Section: kernel
+Installed-Size: 38244
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux
+Version: 6.8.0-83.83
 Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  Contains the corresponding System.map file, the modules built by the
  packager, and scripts that try to ensure that the system is not left in an
@@ -19487,7 +19530,7 @@ Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  correctly, and that supporting packages are also installed.
 
 Package: linux-modules-extra-6.8.0-78-generic
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: optional
 Section: kernel
 Installed-Size: 109709
@@ -19495,6 +19538,7 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux
 Version: 6.8.0-78.78
+Config-Version: 6.8.0-78.78
 Depends: linux-modules-6.8.0-78-generic, wireless-regdb
 Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  This package contains the Linux kernel extra modules for version 6.8.0 on
@@ -19538,38 +19582,31 @@ Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-tools-6.8.0-78
+Package: linux-modules-extra-6.8.0-83-generic
 Status: install ok installed
 Priority: optional
-Section: devel
-Installed-Size: 18655
+Section: kernel
+Installed-Size: 109700
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux
-Version: 6.8.0-78.78
-Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libdw1t64 (>= 0.161), libelf1t64 (>= 0.144), liblzma5 (>= 5.1.1alpha+20120614), libnuma1 (>= 2.0.11), libpci3 (>= 1:3.8.0), libpython3.12t64 (>= 3.12.1), libslang2 (>= 2.2.4), libssl3t64 (>= 3.0.0), libstdc++6 (>= 4.1.1), libtraceevent1 (>= 1:1.3.0), libudev1 (>= 183), libunwind8, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.3.3), linux-tools-common
-Description: Linux kernel version specific tools for version 6.8.0-78
- This package provides the architecture dependant parts for kernel
- version locked tools (such as perf and x86_energy_perf_policy) for
- version 6.8.0-78 on
- 64 bit x86.
- You probably want to install linux-tools-6.8.0-78-<flavour>.
-
-Package: linux-tools-6.8.0-78-generic
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 516
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 6.8.0-78.78
-Depends: linux-tools-6.8.0-78
-Description: Linux kernel version specific tools for version 6.8.0-78
- This package provides the architecture dependant parts for kernel
- version locked tools (such as perf and x86_energy_perf_policy) for
- version 6.8.0-78 on
- 64 bit x86.
+Version: 6.8.0-83.83
+Depends: linux-modules-6.8.0-83-generic, wireless-regdb
+Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
+ This package contains the Linux kernel extra modules for version 6.8.0 on
+ 64 bit x86 SMP.
+ .
+ Also includes the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports Generic processors.
+ .
+ Geared toward desktop and server systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-generic meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
 
 Package: linux-tools-6.8.0-79
 Status: install ok installed
@@ -19604,6 +19641,39 @@ Description: Linux kernel version specific tools for version 6.8.0-79
  version 6.8.0-79 on
  64 bit x86.
 
+Package: linux-tools-6.8.0-83
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 18655
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux
+Version: 6.8.0-83.83
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libdw1t64 (>= 0.161), libelf1t64 (>= 0.144), liblzma5 (>= 5.1.1alpha+20120614), libnuma1 (>= 2.0.11), libpci3 (>= 1:3.8.0), libpython3.12t64 (>= 3.12.1), libslang2 (>= 2.2.4), libssl3t64 (>= 3.0.0), libstdc++6 (>= 4.1.1), libtraceevent1 (>= 1:1.3.0), libudev1 (>= 183), libunwind8, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.3.3), linux-tools-common
+Description: Linux kernel version specific tools for version 6.8.0-83
+ This package provides the architecture dependant parts for kernel
+ version locked tools (such as perf and x86_energy_perf_policy) for
+ version 6.8.0-83 on
+ 64 bit x86.
+ You probably want to install linux-tools-6.8.0-83-<flavour>.
+
+Package: linux-tools-6.8.0-83-generic
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 516
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux
+Version: 6.8.0-83.83
+Depends: linux-tools-6.8.0-83
+Description: Linux kernel version specific tools for version 6.8.0-83
+ This package provides the architecture dependant parts for kernel
+ version locked tools (such as perf and x86_energy_perf_policy) for
+ version 6.8.0-83 on
+ 64 bit x86.
+
 Package: linux-tools-common
 Status: install ok installed
 Priority: optional
@@ -19613,7 +19683,7 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
 Multi-Arch: foreign
 Source: linux
-Version: 6.8.0-79.79
+Version: 6.8.0-83.83
 Provides: bpftool
 Depends: lsb-release, hwdata
 Description: Linux kernel version specific tools for version 6.8.0
@@ -30921,11 +30991,11 @@ Package: systemd-hwe-hwdb
 Status: install ok installed
 Priority: optional
 Section: admin
-Installed-Size: 16
+Installed-Size: 18
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Source: systemd-hwe
-Version: 255.1.4
+Version: 255.1.5
 Depends: udev
 Description: udev rules for hardware enablement (HWE)
  systemd-hwe-hwdb contains hwdb rules for HWE on Ubuntu,
@@ -32287,7 +32357,7 @@ Original-Maintainer: Debian QA Group <packages@qa.debian.org>
 
 Package: xxd
 Status: install ok installed
-Priority: optional
+Priority: important
 Section: editors
 Installed-Size: 153
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
