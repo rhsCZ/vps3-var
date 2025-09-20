@@ -2887,7 +2887,7 @@ Installed-Size: 6237
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 1.22.6ubuntu6.1
+Version: 1.22.6ubuntu6.2
 Depends: tar (>= 1.28-1)
 Pre-Depends: libbz2-1.0, libc6 (>= 2.38), liblzma5 (>= 5.4.0), libmd0 (>= 0.0.0), libselinux1 (>= 3.1~), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Suggests: apt, debsig-verify
@@ -2915,9 +2915,9 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Multi-Arch: foreign
 Source: dpkg
-Version: 1.22.6ubuntu6.1
+Version: 1.22.6ubuntu6.2
 Provides: dpkg-build-api (= 0), dpkg-build-api (= 1)
-Depends: perl:any, libdpkg-perl (= 1.22.6ubuntu6.1), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make, binutils, lto-disabled-list
+Depends: perl:any, libdpkg-perl (= 1.22.6ubuntu6.2), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make, binutils, lto-disabled-list
 Recommends: build-essential, gcc | c-compiler, fakeroot, gnupg | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, gpgv | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, libalgorithm-merge-perl
 Suggests: debian-keyring
 Breaks: debhelper (<< 10.10.1~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), sq (<< 0.33.0~), sqop (<< 0.27.2~)
@@ -6147,7 +6147,7 @@ Installed-Size: 406
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
 Source: landscape-client
-Version: 24.02-0ubuntu5.3
+Version: 24.02-0ubuntu5.6
 Depends: python3:any, debconf (>= 0.5) | debconf-2.0, python3-twisted, python3-configobj, python3-apt, ca-certificates, python3-gdbm, python3-netifaces, lsb-release, adduser, bc, lshw, libpam-modules, python3-setuptools
 Description: Landscape administration system client - Common files
  Landscape is a web-based tool for managing Ubuntu systems. This
@@ -8460,7 +8460,7 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Multi-Arch: foreign
 Source: dpkg
-Version: 1.22.6ubuntu6.1
+Version: 1.22.6ubuntu6.2
 Depends: perl:any, dpkg (>= 1.18.11)
 Recommends: libfile-fcntllock-perl, liblocale-gettext-perl, bzip2, xz-utils (>= 5.4.0)
 Suggests: debian-keyring, gnupg | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, gpgv | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, gcc | c-compiler, binutils, patch, sensible-utils, git, bzr
@@ -12742,7 +12742,7 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
 Multi-Arch: same
 Source: mysql-8.0
-Version: 8.0.43-0ubuntu0.24.04.1
+Version: 8.0.43-0ubuntu0.24.04.2
 Depends: mysql-common (>= 5.5), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Description: MySQL database client library
  MySQL is a fast, stable and true multi-user, multi-threaded SQL database
@@ -13313,7 +13313,7 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
 Multi-Arch: same
 Source: openjpeg2
-Version: 2.5.0-2ubuntu0.3
+Version: 2.5.0-2ubuntu0.4
 Depends: libc6 (>= 2.34)
 Description: JPEG 2000 image compression/decompression library
  OpenJPEG is a library for handling the JPEG 2000 image compression format.
