@@ -1,0 +1,15 @@
+#!/bin/sh
+# Pre-commit hook: uloží dump všech DB do full.sql.gz a přidá do commitu
+
+set -e
+
+DUMP_FILE="full.sql.gz"
+
+echo "Spouštím mysqldump..."
+mysqldump --all-databases --routines --events --triggers --single-transaction \
+    | gzip -c > "$DUMP_FILE"
+
+# Přidání do commitu
+git add "$DUMP_FILE"
+
+echo "Hotovo: databáze dumpnuta do $DUMP_FILE a přidána do commitu."
