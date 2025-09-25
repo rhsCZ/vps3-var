@@ -3162,34 +3162,6 @@ Package: libboost-program-options1.83.0
 Architecture: amd64
 Auto-Installed: 1
 
-Package: linux-tools-6.8.0-79-generic
-Architecture: amd64
-Auto-Installed: 1
-
-Package: linux-modules-extra-6.8.0-79-generic
-Architecture: amd64
-Auto-Installed: 1
-
-Package: linux-tools-6.8.0-79
-Architecture: amd64
-Auto-Installed: 1
-
-Package: linux-headers-6.8.0-79
-Architecture: amd64
-Auto-Installed: 1
-
-Package: linux-modules-6.8.0-79-generic
-Architecture: amd64
-Auto-Installed: 1
-
-Package: linux-image-6.8.0-79-generic
-Architecture: amd64
-Auto-Installed: 1
-
-Package: linux-headers-6.8.0-79-generic
-Architecture: amd64
-Auto-Installed: 1
-
 Package: linux-tools-6.8.0-83-generic
 Architecture: amd64
 Auto-Installed: 1

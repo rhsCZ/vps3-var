@@ -2857,8 +2857,8 @@ Section: devel
 Installed-Size: 519
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
-Source: dotnet8 (8.0.119-8.0.19-0ubuntu1~24.04.1)
-Version: 8.0.19-0ubuntu1~24.04.1
+Source: dotnet8 (8.0.120-8.0.20-0ubuntu1~24.04.1)
+Version: 8.0.20-0ubuntu1~24.04.1
 Replaces: dotnet-host, dotnet-host-7.0
 Provides: dotnet-host, dotnet-host-7.0
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
@@ -2887,7 +2887,7 @@ Installed-Size: 6237
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 1.22.6ubuntu6.2
+Version: 1.22.6ubuntu6.5
 Depends: tar (>= 1.28-1)
 Pre-Depends: libbz2-1.0, libc6 (>= 2.38), liblzma5 (>= 5.4.0), libmd0 (>= 0.0.0), libselinux1 (>= 3.1~), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Suggests: apt, debsig-verify
@@ -2915,9 +2915,9 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Multi-Arch: foreign
 Source: dpkg
-Version: 1.22.6ubuntu6.2
+Version: 1.22.6ubuntu6.5
 Provides: dpkg-build-api (= 0), dpkg-build-api (= 1)
-Depends: perl:any, libdpkg-perl (= 1.22.6ubuntu6.2), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make, binutils, lto-disabled-list
+Depends: perl:any, libdpkg-perl (= 1.22.6ubuntu6.5), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make, binutils, lto-disabled-list
 Recommends: build-essential, gcc | c-compiler, fakeroot, gnupg | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, gpgv | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, libalgorithm-merge-perl
 Suggests: debian-keyring
 Breaks: debhelper (<< 10.10.1~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), sq (<< 0.33.0~), sqop (<< 0.27.2~)
@@ -3568,11 +3568,11 @@ Package: firmware-sof-signed
 Status: install ok installed
 Priority: optional
 Section: non-free-firmware/kernel
-Installed-Size: 9864
+Installed-Size: 11326
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Source: firmware-sof
-Version: 2023.12.1-1ubuntu1.7
+Version: 2023.12.1-1ubuntu1.9
 Description: Intel SOF firmware - signed
  Provides the Intel SOF audio firmware and topology needed for audio
  functionality on some Intel system.
@@ -7402,7 +7402,7 @@ Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
 
 Package: libc6
 Status: install ok installed
-Priority: optional
+Priority: required
 Section: libs
 Installed-Size: 13431
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -8460,7 +8460,7 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Multi-Arch: foreign
 Source: dpkg
-Version: 1.22.6ubuntu6.2
+Version: 1.22.6ubuntu6.5
 Depends: perl:any, dpkg (>= 1.18.11)
 Recommends: libfile-fcntllock-perl, liblocale-gettext-perl, bzip2, xz-utils (>= 5.4.0)
 Suggests: debian-keyring, gnupg | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, gpgv | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg, gcc | c-compiler, binutils, patch, sensible-utils, git, bzr
@@ -13494,7 +13494,7 @@ Original-Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.a
 
 Package: libpam0g
 Status: install ok installed
-Priority: optional
+Priority: required
 Section: libs
 Installed-Size: 209
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -17467,40 +17467,6 @@ Description: Complete Generic Linux kernel and headers
  This package will always depend on the latest complete generic Linux kernel
  and headers.
 
-Package: linux-headers-6.8.0-79
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 83959
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Multi-Arch: foreign
-Source: linux
-Version: 6.8.0-79.79
-Depends: coreutils
-Description: Header files related to Linux kernel version 6.8.0
- This package provides kernel header files for version 6.8.0, for sites
- that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-6.8.0-79/debian.README.gz for details
-
-Package: linux-headers-6.8.0-79-generic
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 28612
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 6.8.0-79.79
-Provides: linux-headers, linux-headers-3.0
-Depends: linux-headers-6.8.0-79, libc6 (>= 2.38), libelf1t64 (>= 0.144), libgcc-s1 (>= 4.2), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.3.3)
-Description: Linux kernel headers for version 6.8.0 on 64 bit x86 SMP
- This package provides kernel header files for version 6.8.0 on
- 64 bit x86 SMP.
- .
- This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-6.8.0-79/debian.README.gz for details.
-
 Package: linux-headers-6.8.0-83
 Status: install ok installed
 Priority: optional
@@ -18124,7 +18090,7 @@ Description: Signed kernel image generic
 Built-Using: linux (= 6.8.0-78.78)
 
 Package: linux-image-6.8.0-79-generic
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: optional
 Section: kernel
 Installed-Size: 14689
@@ -18132,6 +18098,7 @@ Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-signed
 Version: 6.8.0-79.79
+Config-Version: 6.8.0-79.79
 Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, redhat-cluster-modules, spl-dkms, spl-modules, v4l2loopback-dkms, v4l2loopback-modules, virtualbox-guest-modules, zfs-dkms, zfs-modules
 Depends: kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-6.8.0-79-generic
 Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo, initramfs-tools | linux-initramfs-tool
@@ -18837,7 +18804,7 @@ Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  correctly, and that supporting packages are also installed.
 
 Package: linux-modules-6.8.0-79-generic
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: optional
 Section: kernel
 Installed-Size: 38255
@@ -18845,6 +18812,7 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux
 Version: 6.8.0-79.79
+Config-Version: 6.8.0-79.79
 Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  Contains the corresponding System.map file, the modules built by the
  packager, and scripts that try to ensure that the system is not left in an
@@ -19632,7 +19600,7 @@ Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  correctly, and that supporting packages are also installed.
 
 Package: linux-modules-extra-6.8.0-79-generic
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: optional
 Section: kernel
 Installed-Size: 109703
@@ -19640,6 +19608,7 @@ Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux
 Version: 6.8.0-79.79
+Config-Version: 6.8.0-79.79
 Depends: linux-modules-6.8.0-79-generic, wireless-regdb
 Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  This package contains the Linux kernel extra modules for version 6.8.0 on
@@ -19708,39 +19677,6 @@ Description: Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP
  You likely do not want to install this package directly. Instead, install
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
-
-Package: linux-tools-6.8.0-79
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 18655
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 6.8.0-79.79
-Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libdw1t64 (>= 0.161), libelf1t64 (>= 0.144), liblzma5 (>= 5.1.1alpha+20120614), libnuma1 (>= 2.0.11), libpci3 (>= 1:3.8.0), libpython3.12t64 (>= 3.12.1), libslang2 (>= 2.2.4), libssl3t64 (>= 3.0.0), libstdc++6 (>= 4.1.1), libtraceevent1 (>= 1:1.3.0), libudev1 (>= 183), libunwind8, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.3.3), linux-tools-common
-Description: Linux kernel version specific tools for version 6.8.0-79
- This package provides the architecture dependant parts for kernel
- version locked tools (such as perf and x86_energy_perf_policy) for
- version 6.8.0-79 on
- 64 bit x86.
- You probably want to install linux-tools-6.8.0-79-<flavour>.
-
-Package: linux-tools-6.8.0-79-generic
-Status: install ok installed
-Priority: optional
-Section: devel
-Installed-Size: 516
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 6.8.0-79.79
-Depends: linux-tools-6.8.0-79
-Description: Linux kernel version specific tools for version 6.8.0-79
- This package provides the architecture dependant parts for kernel
- version locked tools (such as perf and x86_energy_perf_policy) for
- version 6.8.0-79 on
- 64 bit x86.
 
 Package: linux-tools-6.8.0-83
 Status: install ok installed
@@ -19827,8 +19763,8 @@ Description: Linux kernel version specific tools for version 6.8.0
 
 Package: locales
 Status: install ok installed
-Priority: standard
-Section: localization
+Priority: important
+Section: libs
 Installed-Size: 16712
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
@@ -21147,8 +21083,8 @@ Section: devel
 Installed-Size: 18527
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
-Source: dotnet8 (8.0.119-8.0.19-0ubuntu1~24.04.1)
-Version: 8.0.119-0ubuntu1~24.04.1
+Source: dotnet8 (8.0.120-8.0.20-0ubuntu1~24.04.1)
+Version: 8.0.120-0ubuntu1~24.04.1
 Replaces: netstandard-targeting-pack-2.1, netstandard-targeting-pack-2.1-7.0
 Provides: netstandard-targeting-pack-2.1, netstandard-targeting-pack-2.1-7.0
 Conflicts: netstandard-targeting-pack-2.1, netstandard-targeting-pack-2.1-7.0
@@ -21874,9 +21810,9 @@ Installed-Size: 307
 Maintainer: PowerDNS Autobuilder <powerdns.support@powerdns.com>
 Architecture: amd64
 Source: pdns
-Version: 4.9.8-1pdns.noble
+Version: 4.9.9-1pdns.noble
 Provides: pdns-backend
-Depends: pdns-server (= 4.9.8-1pdns.noble), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 4.9.9-1pdns.noble), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Conffiles:
  /etc/powerdns/named.conf 63c70a6c3867414ec79d6bb6f59e327e
  /etc/powerdns/pdns.d/bind.conf 26ed7a0ba961ff6c2a7481ccb798fa67
@@ -21899,9 +21835,9 @@ Installed-Size: 184
 Maintainer: PowerDNS Autobuilder <powerdns.support@powerdns.com>
 Architecture: amd64
 Source: pdns
-Version: 4.9.8-1pdns.noble
+Version: 4.9.9-1pdns.noble
 Provides: pdns-backend
-Depends: pdns-server (= 4.9.8-1pdns.noble), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmysqlclient21 (>= 8.0.11), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 4.9.9-1pdns.noble), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmysqlclient21 (>= 8.0.11), libstdc++6 (>= 13.1)
 Suggests: default-mysql-server
 Description: MySQL backend for PowerDNS
  PowerDNS is a versatile nameserver which supports a large number
@@ -21939,7 +21875,7 @@ Installed-Size: 12712
 Maintainer: PowerDNS Autobuilder <powerdns.support@powerdns.com>
 Architecture: amd64
 Source: pdns
-Version: 4.9.8-1pdns.noble
+Version: 4.9.9-1pdns.noble
 Depends: adduser, libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libluajit-5.1-2 (>= 2.0.4+dfsg) | libluajit2-5.1-2 (>= 2.1~), libp11-kit0 (>= 0.25.0), libsodium23 (>= 0.6.1), libsqlite3-0 (>= 3.6.5), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libsystemd0
 Recommends: pdns-backend-bind
 Suggests: pdns-backend
@@ -21964,7 +21900,7 @@ Installed-Size: 17044
 Maintainer: PowerDNS Autobuilder <powerdns.support@powerdns.com>
 Architecture: amd64
 Source: pdns
-Version: 4.9.8-1pdns.noble
+Version: 4.9.9-1pdns.noble
 Depends: libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libp11-kit0 (>= 0.25.0), libsodium23 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
 Description: Tools for DNS debugging by PowerDNS
  PowerDNS is a versatile nameserver which supports a large number
