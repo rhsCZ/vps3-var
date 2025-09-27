@@ -21360,10 +21360,10 @@ Package: open-vm-tools
 Status: install ok installed
 Priority: optional
 Section: admin
-Installed-Size: 3127
+Installed-Size: 3131
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
-Version: 2:12.4.5-1~ubuntu0.24.04.2
+Version: 2:12.5.0-1~ubuntu0.24.04.1
 Replaces: open-vm-tools-sdmp (<< 2:12.1.0-2~)
 Depends: libc6 (>= 2.38), libdrm2 (>= 2.4.3), libfuse3-3 (>= 3.2.3), libgcc-s1 (>= 3.3), libglib2.0-0t64 (>= 2.32.0), libmspack0t64 (>= 0.4), libssl3t64 (>= 3.0.0), libtirpc3t64 (>= 1.0.2), libudev1 (>= 183), libxml2 (>= 2.7.4), libxmlsec1t64 (>= 1.2.31), libxmlsec1t64-openssl (>= 1.2.31), pciutils, iproute2, lsb-release
 Pre-Depends: init-system-helpers (>= 1.54~)
@@ -21380,7 +21380,7 @@ Conffiles:
  /etc/vmware-tools/statechange.subr 9ebfc4a9aa22fe49491ad4ac47d4d22c
  /etc/vmware-tools/suspend-vm-default b4317ef6f9e0fccc5dbde432eacfd2b7
  /etc/vmware-tools/tools.conf 76d7075ddb1a4266cb7e43f3a50181b7
- /etc/vmware-tools/tools.conf.example 919a0c1e31f1bdcac517e183a6e3dd95
+ /etc/vmware-tools/tools.conf.example 055efddf9c0ee525623e7ef93d0ab1b6
  /etc/vmware-tools/vgauth.conf 08a49e9affbd864b51b8b77251accd89
  /etc/vmware-tools/vgauth/schemas/XMLSchema-hasFacetAndProperty.xsd 9308e8b04cbf7d2748a287ace40878ea
  /etc/vmware-tools/vgauth/schemas/XMLSchema-instance.xsd e1059f0307358c02766193e5e24c107b
